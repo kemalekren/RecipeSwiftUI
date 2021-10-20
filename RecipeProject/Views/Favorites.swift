@@ -8,8 +8,42 @@
 import SwiftUI
 
 struct Favorites: View {
+    @EnvironmentObject var modelData: DBViewModel
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                Section(header: Text("Image Name")){
+                    TextField("", text: $modelData.imageName)
+                }
+                Section(header: Text("Title")){
+                    TextField("", text: $modelData.title)
+                }
+                Section(header: Text("Description")){
+                    TextField("", text: $modelData.detail)
+                }
+                Section(header: Text("Occupation")){
+                    TextField("", text: $modelData.occupation)
+                }
+            }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Add Data")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button("Save") {
+                        modelData.addFavorite(presentation: presentation)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button("Close") {
+                        presentation.wrappedValue.dismiss()
+                    }
+                }
+            }
+        }
+        .onDisappear(perform: modelData.deInitialData)
     }
 }
 

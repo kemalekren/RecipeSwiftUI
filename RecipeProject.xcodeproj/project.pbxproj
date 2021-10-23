@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0622AE27245C400076CE3D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0622AD27245C400076CE3D /* DummyData.swift */; };
 		AD91B1B7271C953F0057772C /* RecipeProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91B1B6271C953F0057772C /* RecipeProjectApp.swift */; };
 		AD91B1B9271C953F0057772C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91B1B8271C953F0057772C /* ContentView.swift */; };
 		AD91B1BB271C95440057772C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD91B1BA271C95440057772C /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD0622AD27245C400076CE3D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		AD91B1B3271C953E0057772C /* RecipeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD91B1B6271C953F0057772C /* RecipeProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeProjectApp.swift; sourceTree = "<group>"; };
 		AD91B1B8271C953F0057772C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		AD91B1AA271C953E0057772C = {
 			isa = PBXGroup;
 			children = (
+				AD0622AD27245C400076CE3D /* DummyData.swift */,
 				AD91B1B5271C953F0057772C /* RecipeProject */,
 				AD91B1B4271C953E0057772C /* Products */,
 			);
@@ -188,6 +191,7 @@
 				AD91B1B9271C953F0057772C /* ContentView.swift in Sources */,
 				AD91B1D2271C974A0057772C /* HomeView.swift in Sources */,
 				AD91B1B7271C953F0057772C /* RecipeProjectApp.swift in Sources */,
+				AD0622AE27245C400076CE3D /* DummyData.swift in Sources */,
 				AD91B1D6272096CB0057772C /* Favorites.swift in Sources */,
 				AD91B1CE271C967B0057772C /* DBViewModel.swift in Sources */,
 				AD91B1D4271C9BCC0057772C /* Recipe.swift in Sources */,

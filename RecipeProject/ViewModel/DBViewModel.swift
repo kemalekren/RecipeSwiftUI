@@ -34,6 +34,33 @@ class DBViewModel: ObservableObject {
         
     }
     
+    func createInitialData() {
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                // Get realm and table instances for this thread
+                let realm = try! Realm()
+                
+                // Break up the writing blocks into smaller portions
+                // by starting a new transaction
+                
+                dummyData.forEach { value in
+                    realm.beginWrite()
+                    
+                    
+                    realm.create(Recipe.self, value: [
+                        "title": value.title,
+                        "imageName": value.imageName,
+                        "occupation": value.occupation,
+                        "detail": value.detail
+                    ])
+                    
+                    try! realm.commitWrite()
+                }
+            }
+        }
+    }
+
+    
  // Add New Data
     
     func addFavorite(presentation: Binding<PresentationMode>) {

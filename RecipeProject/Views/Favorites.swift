@@ -33,7 +33,8 @@ struct Favorites: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Save") {
-                        modelData.addFavorite(presentation: presentation)
+//                        modelData.addFavorite(presentation: presentation)
+                        modelData.createInitialData()
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading){
